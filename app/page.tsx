@@ -95,24 +95,24 @@ export default function GoalCalculator() {
             <h2 className="text-lg font-bold text-[#224c87] border-b pb-2">Set Your Goal</h2>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Current Cost of Goal (₹)</label>
-              <input type="number" value={inputs.cost} onChange={(e) => setInputs({...inputs, cost: Number(e.target.value)})} className="w-full p-2 border rounded-lg text-black focus:ring-2 focus:ring-[#224c87] outline-none" />
+              <label htmlFor="current-cost" className="block text-sm font-medium text-gray-700 mb-1">Current Cost of Goal (₹)</label>
+              <input id="current-cost" type="number" value={inputs.cost} onChange={(e) => setInputs({...inputs, cost: Number(e.target.value)})} className="w-full p-2 border rounded-lg text-black focus:ring-2 focus:ring-[#224c87] outline-none" />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Time Horizon (Years)</label>
-              <input type="range" min="1" max="30" value={inputs.years} onChange={(e) => setInputs({...inputs, years: Number(e.target.value)})} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#224c87]" />
+              <label htmlFor="time-horizon" className="block text-sm font-medium text-gray-700 mb-1">Time Horizon (Years)</label>
+              <input id="time-horizon" type="range" min="1" max="30" value={inputs.years} onChange={(e) => setInputs({...inputs, years: Number(e.target.value)})} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#224c87]" />
               <p className="text-right text-sm font-bold text-[#224c87]">{inputs.years} Years</p>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Expected Inflation (%)</label>
-              <input type="number" value={inputs.inflation} onChange={(e) => setInputs({...inputs, inflation: Number(e.target.value)})} className="w-full p-2 border rounded-lg text-black" />
+              <label htmlFor="expected-inflation" className="block text-sm font-medium text-gray-700 mb-1">Expected Inflation (%)</label>
+              <input id="expected-inflation" type="number" value={inputs.inflation} onChange={(e) => setInputs({...inputs, inflation: Number(e.target.value)})} className="w-full p-2 border rounded-lg text-black" />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Expected Returns (%)</label>
-              <input type="number" value={inputs.returns} onChange={(e) => setInputs({...inputs, returns: Number(e.target.value)})} className="w-full p-2 border rounded-lg text-black" />
+              <label htmlFor="expected-returns" className="block text-sm font-medium text-gray-700 mb-1">Expected Returns (%)</label>
+              <input id="expected-returns" type="number" value={inputs.returns} onChange={(e) => setInputs({...inputs, returns: Number(e.target.value)})} className="w-full p-2 border rounded-lg text-black" />
             </div>
           </div>
 
@@ -170,7 +170,7 @@ export default function GoalCalculator() {
 
         </div>
       </div>
-      <p className="text-center text-gray-400 mt-6 text-xs italic">Varsha's HDFC Calculator - Powering Financial Goals</p>
+      <p className="text-center text-gray-400 mt-6 text-xs italic">Varsha&apos;s HDFC Calculator - Powering Financial Goals</p>
     </div>
   );
 }
